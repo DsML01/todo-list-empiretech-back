@@ -13,7 +13,7 @@ class Task(db.Model):
     is_in_progress = db.Column(db.Boolean, default=False, nullable=False)
     created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc), nullable=False) #If do not user lambda, the value is going to be the time when the server starts
     updated_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
-    priority = db.Column(db.Integer, default=0, nullable=False)
+    priority = db.Column(db.Integer, default=1, nullable=False)
 
     def to_dict(self):
         return {
