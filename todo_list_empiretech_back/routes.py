@@ -25,6 +25,7 @@ def create_task():
 
 @tasks_bp.route('/', methods=['GET'])
 def get_tasks():
+    #Aqui poderia ser adicionado paginação e filtros, porém não o fiz para manter o exemplo simples e didático.
     tasks = Task.query.all()
     tasks_read = [TaskRead.model_validate(task).model_dump() for task in tasks]
     return jsonify(tasks_read), 200
