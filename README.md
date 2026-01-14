@@ -21,6 +21,12 @@ API RESTful para gerenciamento de tarefas, desenvolvida com Flask
 
 ## 🚀 Execução
 
+0. **Clonar o Repositório:**
+```bash
+git clone https://github.com/DsML01/todo-list-empiretech-back.git
+
+```
+
 1. **Instalação:**
 ```bash
 poetry install
