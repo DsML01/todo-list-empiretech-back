@@ -1,8 +1,10 @@
 from flask import Flask
 from flask_cors import CORS
+
 from .models import db
 from .routes import tasks_bp
 from .settings import settings
+
 
 def create_app():
     app = Flask(__name__)
